@@ -16,8 +16,8 @@ request.onload = function() {
         return(crimes.primary_type === primaryType && crimes.description === description);
     });
     
-    for (var x = 0; x < selections.length; x++){
-        document.writeln(selections[x].latitude + " " + selections[x].longitude);
-    }
+    /*for (var x = 0; x < selections.length; x++){
+        document.writeln("ID" + selections[x].id + " " + selections[x].latitude + " " + selections[x].longitude + "\n");
+    }*/
     
 }
