@@ -1,8 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     background: #e9f6fc;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+input{
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#autocomplete {
+    padding: 5px;
+}
+.text_headers {
+    width: 90%;
+}
+.user_input {
+    margin: 0 auto;
+    width: 90%;
+    padding-bottom: 20px;
 }
 .map_container {
     margin: 0 auto;
