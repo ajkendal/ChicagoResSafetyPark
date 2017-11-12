@@ -1,7 +1,7 @@
 # print("Helloo Bahar")
 def main():
     f = open('wards_codes.js','w')
-    f.write('Hello World')
+    f.write('console.log(Hello World);')
     f.close()
     return "Hi Saeed :)"
 
