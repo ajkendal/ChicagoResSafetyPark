@@ -2,9 +2,12 @@
 # Prints all the wards that has street sweeping
 from wardAlocation import *
 from shapely.geometry import Point, Polygon, shape
-import pandas as pd
+# import pandas as pd
 from datetime import datetime
+import dateutil.parser as dt
 import csv
+import argparse
+
 
 
 filename="Street_Sweeping_Schedule_-_2017.csv"
@@ -33,13 +36,34 @@ def ward_cleaning_section(neighbour_wards, data, selected_time):
 
 
 
+# pt = Point(-87.584454, 41.8041113)
+# dt = datetime(2017, 11, 9)
+def main(lng,lat,date):
 
-dt = datetime(2017, 11, 9)
-pt = Point(-87.584454, 41.8041113)
-neighbour_wards = find_all_wards(pt, 1)
-
-#print(neighbour_wards)
-data  = sweep_data()
-swept_wards = ward_cleaning_section(neighbour_wards, data, dt)
+    pt = Point(lng, lat)
+    date_time_obj = dt.parse(date) #"Tue, 22 Nov 2011 06:00:00 GMT"
+    neighbour_wards = find_all_wards(pt, 1)
+    data  = sweep_data()
+    swept_wards = ward_cleaning_section(neighbour_wards, data, date_time_obj)
+    return swept_wards
 
 #print(swept_wards)
+
+
+
+parser = argparse.ArgumentParser(description='Returns to be swept wards for a location and a time')
+
+parser.add_argument('--lng', required=True, type=float)
+parser.add_argument('--lat', required=True, type=float)
+parser.add_argument('--date', required=True)
+args = parser.parse_args()
+
+
+lng=args.lng
+lat=args.lat
+date=args.date
+
+
+#print(str(lng)+ " ** "+str(lat)+" ** "+date)
+#print(main(-87.584454, 41.8041113,"Thu, 9 Nov 2017 06:00:00 GMT"))
+print(main(lng,lat,date))
