@@ -7,6 +7,9 @@ handlers:
   static_files: www/index.html
   upload: www/index.html
 
+- url: /python
+  script: main.app
+
 - url: /(.*)
   static_files: www/\1
   upload: www/(.*)
