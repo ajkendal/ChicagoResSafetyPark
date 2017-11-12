@@ -16,9 +16,9 @@
         
         
         <div class="user_input">
-            <input type="text" id="location_txt_field" name="user_location" placeholder="Current Location">
-            <input type="date" id="txt_date"  name="user_date" />
-            <input type="time" name="user_time" id="txt_time">
+            <input id="autocomplete" placeholder="Current Location" onFocus="geolocate()" type="text" >
+            <input type="date" id="txt_date" name="user_date" />
+            <input type="time" id="txt_time" name="user_time" />
             <a href="#" id="submit_btn">Submit</a>
         </div>
         
@@ -28,10 +28,9 @@
         <div class="map_container">
             <div id="map"></div>
             <script src="js/map_init.js"></script>
-            <script 
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI3hkjcGqQFxbHBjyoMGN5AOGwkh_SO30&callback=initMap"
-                async defer>
-            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI3hkjcGqQFxbHBjyoMGN5AOGwkh_SO30&libraries=places&callback=initAutocomplete"
+        async defer></script>
+            
         </div>
         
         <!-- Loading Star for production -->
@@ -40,5 +39,6 @@
         </div>
         <script src="js/grabMap.js" type="text/javascript"></script>
         <script src="js/form.js" type="text/javascript"></script>
+        <script src="js/auto_complete.js" type="text/javascript"></script>
     </body>
 </html>

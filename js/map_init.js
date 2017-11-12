@@ -1,6 +1,7 @@
 var map;
 function initMap() {
-    var latLng = {lat: 41.804113, lng: -87.584454};
+    console.log()
+    var latLng = {lat: globeGeo.lat, lng: globeGeo.lng};
     var starIcon = "/ChicagoResSafetyPark/img/small_star.png";
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 17,
