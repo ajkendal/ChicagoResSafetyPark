@@ -36,7 +36,7 @@ function initMap(userLocation) {
     var apiRequest = new XMLHttpRequest();
     apiRequest.open('GET', apiCustomUrl, true);
     apiRequest.send();
-    var apiResponse = apiRequest.response;
+    var apiResponse = apiRequest.responseText;
     
     console.log(apiResponse);
     
