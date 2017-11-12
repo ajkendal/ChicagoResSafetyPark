@@ -30,12 +30,57 @@ function initMap(userLocation, userDate, userTime) {
 
     var markerCluster = new MarkerClusterer(map, markers,options);
     
+    var apiCustomUrl = "https://cors.io/?https://mellodi.pythonanywhere.com/bucketIdList";
+
+    $.get(apiCustomUrl, function(data){
+        
+    }).done(function(data) {
+        var testing_lvl_1 = jQuery.parseJSON(data);
+
+        //console.log(testing_lvl_1);
+
+        for(var lvl_1 = 0; lvl_1 < testing_lvl_1.length; lvl_1++){
+            //console.log("lvl1: lat" + testing_lvl_1[lvl_1].geometry.coordinates + " ");
+            var polyObject = [];
+            var newObjects = testing_lvl_1[lvl_1].geometry.coordinates;
+
+            for(var lvl2 = 0; lvl2 <newObjects.length; lvl2++ ){
+                //console.log(newObjects[lvl2]);
+                var lvl3Object = newObjects[lvl2].toString();
+
+                var ss = lvl3Object.split(",");  
+
+                //console.log(ss);
+
+                for(var index = 0; index < ss.length;index+=2){
+
+                    //console.log(index);
+                    next = index + 1;
+                    //console.log(next);
+                    var testing = {
+                        lat: parseFloat(ss[next]),
+                        lng: parseFloat(ss[index])
+                    };
+                    //console.log(testing);
+                    polyObject.push(testing);
+
+                }
+                var allBlocks = new google.maps.Polygon({
+                    paths: polyObject,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.5,
+                    strokeWeight: 2,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.25
+                });
+                allBlocks.setMap(map);
+            }
+        }
+
+    });
     
-    /*var apiCustomUrl = "https://cors.io/?https://mellodi.pythonanywhere.com/setBucket";
-    var apiRequest = new XMLHttpRequest();
-    apiRequest.open('GET', requestURL);
     
-    var obj = { "lat": userLocation.lat, "lng": userLocation.lng, "date": userDate, "time": userTime};
+    /*var obj = { "lat": userLocation.lat, "lng": userLocation.lng, "date": userDate, "time": userTime};
     
     var newJson = JSON.stringify(obj);
     
