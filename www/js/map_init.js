@@ -27,18 +27,24 @@ function initMap(userLocation) {
     
     var options = {
             minClusterSize: 1,
-            imagePath: 'images/m'
+            imagePath: '/ChicagoResSafetyPark/img/m'
     };
 
     var markerCluster = new MarkerClusterer(map, markers,options);
     
-    var apiCustomUrl = "https://mellodi.pythonanywhere.com/bucketIdList";
+    var apiCustomUrl = "https://cors.io/?https://mellodi.pythonanywhere.com/bucketIdList";
     var apiRequest = new XMLHttpRequest();
-    apiRequest.open('GET', apiCustomUrl, true);
-    apiRequest.send();
-    var apiResponse = apiRequest.responseText;
     
-    console.log(apiResponse);
+    //apiRequest.open('GET', apiCustomUrl, true);
+    //apiRequest.send();
+
+    $.get(apiCustomUrl, function(data){
+        
+    }).done(function(data) {
+        console.log(data);
+    });
+    
+    
     
     /*//call the sweepStreet.py
     $.ajax({

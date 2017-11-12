@@ -1,6 +1,13 @@
 <!doctype html>
 <html>
     <head>  
+        <httpProtocol>
+            <customHeaders>
+                <add name="Access-Control-Allow-origin" value="*" />
+                <add name="Access-Control-Allow-headers" value="Content-Type"/>
+                <add name="Access-Control-Allow-Methods" value="GET, POST, PUT, DELETE, OPTIONS" />
+            </customHeaders>
+        </httpProtocol>
         <meta charset="utf-8">
         <title>Chicago Residential Parking</title>
         <script src="js/crime_data.js" type="text/javascript"></script>
@@ -10,6 +17,13 @@
     </head>
 
     <body onload="geolocate()">
+        
+        <header>
+        
+            
+        </header>
+        
+    
         
         <div id="textHeaders">
             <h1>Chicago Residential Parking</h1>
