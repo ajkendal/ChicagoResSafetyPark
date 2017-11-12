@@ -17,14 +17,12 @@ app = Flask(__name__)
 
 @app.route('/test')
 def server():
-    f = open('wards_codes.js','w')
-    f.write('console.log(Hello World);')
-    f.close()
+    print("jooone madaret")
     return 0
 
 
 if __name__ == "__main__":
-  app.run(host='172.217.1.52')
+  app.run()
 
 # if __name__ == '__main__':
 #     main()
