@@ -8,7 +8,7 @@ from flask import Flask
 from flask import render_template
 from flask import jsonify
 app = Flask(__name__)
-print("hiiiii")
+
 # def main():
 #     f = open('wards_codes.js','w')
 #     f.write('console.log(Hello World);')
@@ -24,7 +24,7 @@ def server():
 
 
 if __name__ == "__main__":
-  app.run()
+  app.run(host='172.217.1.52')
 
 # if __name__ == '__main__':
 #     main()
