@@ -18,7 +18,7 @@ function initMap(userLocation) {
     //call the sweepStreet.py
     $.ajax({
         type: "POST",
-        url: "../src/test.py",
+        url: "test.py",
         data: { param: " "},
         dataType: "text"
         }).done(function( o ) {
