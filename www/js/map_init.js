@@ -18,11 +18,11 @@ function initMap(userLocation) {
     //call the sweepStreet.py
     $.ajax({
         type: "POST",
-        url: "test.py",
+        url: "/test",
         data: { param: " "},
         dataType: "text"
         }).done(function( o ) {
-            console.log(wards_codes.js);
+            
             alert("OK");
     });
 
