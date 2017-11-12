@@ -12,13 +12,15 @@ input{
     font-family: 'Josefin Sans', sans-serif;
     margin: 5px;
 }
+#textHeaders{
+    padding: 15px;
+    align-content: center;
+    text-align: center;
+}
 #autocomplete {
     width: 90%;
     padding: 5px;
     align-content: center;
-}
-.text_headers {
-    width: 90%;
 }
 #txt_date,
 #txt_time {

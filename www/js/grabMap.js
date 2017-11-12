@@ -18,9 +18,9 @@ function onReady() {
     
     function runLocation() {
         if (inputTxt.value) {
-            userLocation = getLatLng(inputTxt.value);
+            userLocation = getLatLng(inputTxt.value, inputDate.value, intputTime.value);
         } else {
-            initMap(globePosition);
+            initMap(globePosition, inputDate.value, intputTime.value);
         }
     
     }
