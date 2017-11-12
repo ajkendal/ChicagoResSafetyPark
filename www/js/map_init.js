@@ -8,11 +8,23 @@ function initMap(userLocation) {
         center: latLng,
         mapTypeId: 'roadmap'
     });
-    
+
     var marker = new google.maps.Marker({
         position: latLng,
         map: map,
         icon: starIcon
     });
+
+    //call the sweepStreet.py
+    $.ajax({
+        type: "POST",
+        url: "../src/test.py",
+        data: { param: " "},
+        dataType: "text"
+        }).done(function( o ) {
+            alert("OK");
+    });
+
+    console.log()
 
 }
