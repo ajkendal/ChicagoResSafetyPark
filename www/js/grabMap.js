@@ -1,3 +1,4 @@
+var userLocation;
 function onReady() {
     "use strict";
 
@@ -11,20 +12,17 @@ function onReady() {
     inputTxt.addEventListener("keypress", function (event) {
         var key = event.which || event.key;
         if (key == 13){
-            console.log("keyPress function");
             runLocation();
         }
     });
     
     function runLocation() {
-        console.log("runLocation Function");
-        
-        console.log(intputTime.value);
-        console.log(inputTxt.value);
-        console.log(inputDate.value);
-        
-        initMap();
-        
+        if (inputTxt.value) {
+            userLocation = getLatLng(inputTxt.value);
+        } else {
+            initMap(globePosition);
+        }
+    
     }
 }
 

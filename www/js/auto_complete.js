@@ -1,5 +1,5 @@
 var autocomplete;
-var globeGeo;
+var globePosition;
 
 function initAutocomplete() {
     // Create the autocomplete object, restricting the search to geographical
@@ -7,6 +7,7 @@ function initAutocomplete() {
     autocomplete = new google.maps.places.Autocomplete(
         /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
         {types: ['geocode']});
+        console.log("auto complete");
 }
 
 // Bias the autocomplete object to the user's geographical location,
@@ -18,8 +19,7 @@ function geolocate() {
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-            globeGeo = geolocation;
-            console.log(globeGeo);
+            globePosition = geolocation;
         });
     }
 }
