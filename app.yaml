@@ -1,14 +1,18 @@
-runtime: python27
+runtime: python
 api_version: 1
+env: flex
 threadsafe: true
+
+entrypoint: gunicorn -b :$PORT main:app
+
+runtime_config:
+  python_version: 3
+
 
 handlers:
 - url: /
   static_files: www/index.html
   upload: www/index.html
-
-- url: /python
-  script: main.app
 
 - url: /(.*)
   static_files: www/\1
