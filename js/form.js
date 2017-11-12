@@ -4,7 +4,6 @@ $(function(){
     var dtFuture = new Date();
     dtFuture.setDate(dtFuture.getDate() + 7);
     
-    
     var hour = dtToday.getHours();
     var mins = dtToday.getMinutes();
     var month = dtToday.getMonth() + 1;
@@ -31,14 +30,11 @@ $(function(){
     if(dayFuture < 10)
         dayFuture = '0' + dayFuture.toString(); 
     
-    
-        
     var maxDate = yearFuture + '-' + monthFuture + '-' + dayFuture;
     var minDate = year + '-' + month + '-' + day;
 
     $('#txt_date').attr('max', maxDate);
     $('#txt_date').attr('min', minDate);
-    
     
     $('#txt_date').val(minDate);
     $('#txt_time').val(defaultTime);

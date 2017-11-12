@@ -2,18 +2,9 @@ function onReady() {
     "use strict";
 
     var sbt_btn = document.getElementById("submit_btn");
-    var inputTxt = document.getElementById("location_txt_field");
-    
-    
-	/*$('#location-button').click(function(evt){
-		if (navigator.geolocation) {
-        	navigator.geolocation.watchPosition(showPos);
-			
-			$("#postcode-error").html('Loading...');
-	    } else {
-	        $("#postcode-error").html('Location unavailable');
-	    }
-	});*/
+    var inputTxt = document.getElementById("autocomplete");
+    var intputTime = document.getElementById("txt_time");
+    var inputDate = document.getElementById("txt_date");
     
     sbt_btn.addEventListener("click", runLocation);
     
@@ -28,8 +19,11 @@ function onReady() {
     function runLocation() {
         console.log("runLocation Function");
         
+        console.log(intputTime.value);
+        console.log(inputTxt.value);
+        console.log(inputDate.value);
         
-        
+        initMap();
         
     }
 }
