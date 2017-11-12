@@ -9,7 +9,6 @@ function initAutocomplete() {
         {types: ['geocode']});
 }
 
- 
 // Bias the autocomplete object to the user's geographical location,
 // as supplied by the browser's 'navigator.geolocation' object.
 function geolocate() {
