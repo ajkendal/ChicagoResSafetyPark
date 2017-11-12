@@ -19,7 +19,7 @@ def server():
     f = open('wards_codes.js','w')
     f.write('console.log(Hello World);')
     f.close()
-    return render_template('index.html')
+    
 
 
 if __name__ == "__main__":
