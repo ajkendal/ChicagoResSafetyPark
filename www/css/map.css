@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background: #e9f6fc;
 }
 .map_container {
     margin: 0 auto;

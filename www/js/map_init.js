@@ -22,6 +22,7 @@ function initMap(userLocation) {
         data: { param: " "},
         dataType: "text"
         }).done(function( o ) {
+            console.log(wards_codes.js);
             alert("OK");
     });
 
