@@ -14,8 +14,33 @@ function initMap(userLocation) {
         map: map,
         icon: starIcon
     });
+    var markers = [];
+    
+    console.log(selections.length);
+    
+    for (var i = 0; i < selections.length; i++){
+        var latLng = new google.maps.LatLng(selections[i].latitude,selections[i].longitude);
 
-    //call the sweepStreet.py
+        var marker = new google.maps.Marker({'position': latLng});
+        markers.push(marker);
+    }
+    
+    var options = {
+            minClusterSize: 1,
+            imagePath: 'images/m'
+    };
+
+    var markerCluster = new MarkerClusterer(map, markers,options);
+    
+    var apiCustomUrl = "https://mellodi.pythonanywhere.com/bucketIdList";
+    var apiRequest = new XMLHttpRequest();
+    apiRequest.open('GET', apiCustomUrl, true);
+    apiRequest.send();
+    var apiResponse = apiRequest.response;
+    
+    console.log(apiResponse);
+    
+    /*//call the sweepStreet.py
     $.ajax({
         type: "POST",
         url: "/test",
@@ -27,5 +52,5 @@ function initMap(userLocation) {
     });
 
     console.log()
-
+   */
 }
