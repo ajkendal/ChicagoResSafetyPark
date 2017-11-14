@@ -17,12 +17,9 @@
 A web application providing ticket free and safe parking spots in Chicago.<br />
 
 #### Tech Stack
+__Languages:__  Python, JavaScript, Ajax, jQuery, HTML, CSS, JSON<br />
+__APIs:__ Google Maps, Google Place Autocomplete, Chicago Crime Data, Chicago Street Cleaning Data<br />
+__Other Technologies:__ Google Cloud App Engine, GitHub, Pythonanywhere, Glitch<br />
 <br />
-**Languages**  Python, JavaScript, Ajax, jQuery, HTML, CSS, JSON<br />
-**APIs** Google Maps, Google Place Autocomplete, Chicago Crime Data, Chicago Street Cleaning Data<br />
-**Other Technologies** Google Cloud App Engine, GitHub, Pythonanywhere, Glitch<br />
-<br />
-
 #### Links
-
 [See Project](https://goo.gl/avvWRh) | [Devpost](https://devpost.com/software/chicagoressafetypark)
