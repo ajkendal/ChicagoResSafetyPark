@@ -14,6 +14,7 @@
 **Time Limit:** 24 Hours<br />
 <br />
 
+### Description 
 A web application providing ticket free and safe parking spots in Chicago.<br />
 
 ### Tech Stack
