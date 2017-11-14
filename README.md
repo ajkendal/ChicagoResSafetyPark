@@ -1,12 +1,12 @@
 # Sweet Spots
 
-###ScarletHacks 2017
-####Award: DESIGNATION - Best Experience for Users
+### ScarletHacks 2017
+#### Award: DESIGNATION - Best Experience for Users
 
-![SweetSpots Logo](/ChicagoResSafetyPark/img/chicago_star.png)
+![ScreenShots](/ChicagoResSafetyPark/img/SweetSpots_2017.png)
 
 
-#####Developers
+##### Developers
 **Back-end:** Saeid Barati & Bahar Radfar<br />
 **Front-end:** Amanda J. Kendal-Brown & Devonald Manney
 <br />
@@ -16,13 +16,12 @@
 
 A web application providing ticket free and safe parking spots in Chicago.<br />
 
-![ScreenShots](/ChicagoResSafetyPark/img/chicago_star.png)
-
-####Tech Stack
+#### Tech Stack
 <br />
 **Languages:**  Python, JavaScript, Ajax, jQuery, HTML, CSS, JSON<br />
 **APIs:** Google Maps, Google Place Autocomplete, Chicago Crime Data, Chicago Street Cleaning Data<br />
 **Other Technologies:** Google Cloud App Engine, GitHub, Pythonanywhere, Glitch<br />
 <br />
-####Links
+#### Links
+<br />
 [See Project](https://goo.gl/avvWRh) | [Devpost](https://devpost.com/software/chicagoressafetypark)
